@@ -1,0 +1,25 @@
+USE codeup_test_db
+SELECT 'These are all the albums in this table' AS 'Result Explanation';
+SELECT '' AS '--------------------------------------';
+SELECT name FROM albums;
+-- UPDATE  albums SET sales = (sales / 10);
+SELECT 'These are all the album sales 10 times more popular' AS 'Result Explanation';
+SELECT '' AS '--------------------------------------';
+SELECT sales FROM albums;
+SELECT 'These are all the album release dates 100 years ago' AS 'Result Explanation';
+SELECT '' AS '--------------------------------------';
+-- UPDATE albums SET release_date = (release_date - 100) WHERE release_date < 1980;
+SELECT release_date FROM albums WHERE release_date < 1900;
+SELECT '' AS '--------------------------------------';
+SELECT 'These are all the albums released before 1980' AS 'Result Explanation';
+SELECT '' AS '--------------------------------------';
+SELECT name FROM albums WHERE release_date < 1980;
+SELECT '' AS '--------------------------------------';
+SELECT 'These are all the albums by Michael Jackson' AS 'Result Explanation';
+SELECT '' AS '--------------------------------------';
+SELECT name FROM albums WHERE artist = 'Michael Jackson';
+SELECT '' AS '--------------------------------------';
+SELECT 'This is Michael Jackson''s name changed to Peter' AS 'Result Explanation';
+SELECT '' AS '--------------------------------------';
+UPDATE albums SET artist = 'Peter Jackson' WHERE artist = 'Michael Jackson';
+SELECT artist FROM albums WHERE artist = 'Peter Jackson';
